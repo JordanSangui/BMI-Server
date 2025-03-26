@@ -1,0 +1,1 @@
+{"version":3,"file":"channel_chats_controller.js","sourceRoot":"","sources":["../../../app/controllers/channel_chats_controller.ts"],"names":[],"mappings":"AAEA,MAAM,CAAC,OAAO,OAAO,sBAAsB;IAQvC,KAAK,CAAC,EAAgB;QAClB,OAAO;YACH;gBACI,OAAO,EAAE,wBAAwB;aACpC;SACJ,CAAA;IACL,CAAC;CACJ"}

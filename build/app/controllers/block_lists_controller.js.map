@@ -1,0 +1,1 @@
+{"version":3,"file":"block_lists_controller.js","sourceRoot":"","sources":["../../../app/controllers/block_lists_controller.ts"],"names":[],"mappings":"AAEA,MAAM,CAAC,OAAO,OAAO,oBAAoB;IAQrC,KAAK,CAAC,EAAgB;QAClB,OAAO;YACH;gBACI,OAAO,EAAE,sBAAsB;aAClC;SACJ,CAAA;IACL,CAAC;CACJ"}
