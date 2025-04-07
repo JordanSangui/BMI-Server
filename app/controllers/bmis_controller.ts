@@ -32,7 +32,8 @@ export default class BmisController {
         const gender = params.gender // 1 for male and 0 for female 
         // console.log(weight, height, gender)
         if (weight && height && gender) {
-            const bmi = weight / (height * height) // bmi
+            const heightInMeter = height*0,01
+            const bmi = weight / (heightInMeter * heightInMeter) // bmi
             const bmi_result: { interval: Array<number>, value_fr: string, value_en: string, comment?: string } | null | undefined = this.BMI.find((element) => this.isBetween(bmi, element.interval)) // bmi calcul
             const result = {
                 weight,
