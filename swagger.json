@@ -1,0 +1,192 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "title",
+    "version": "1.0.0",
+    "description": ""
+  },
+  "components": {
+    "responses": {
+      "Forbidden": {
+        "description": "Access token is missing or invalid"
+      },
+      "Accepted": {
+        "description": "The request was accepted"
+      },
+      "Created": {
+        "description": "The resource has been created"
+      },
+      "NotFound": {
+        "description": "The resource has been created"
+      },
+      "NotAcceptable": {
+        "description": "The resource has been created"
+      }
+    },
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      },
+      "BasicAuth": {
+        "type": "http",
+        "scheme": "basic"
+      },
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-Key"
+      }
+    },
+    "schemas": {
+      "Any": {
+        "description": "Any JSON object not defined as schema"
+      },
+      "PaginationMeta": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "number",
+            "example": 100,
+            "nullable": false
+          },
+          "page": {
+            "type": "number",
+            "example": 2,
+            "nullable": false
+          },
+          "perPage": {
+            "type": "number",
+            "example": 10,
+            "nullable": false
+          },
+          "currentPage": {
+            "type": "number",
+            "example": 3,
+            "nullable": false
+          },
+          "lastPage": {
+            "type": "number",
+            "example": 10,
+            "nullable": false
+          },
+          "firstPage": {
+            "type": "number",
+            "example": 1,
+            "nullable": false
+          },
+          "lastPageUrl": {
+            "type": "string",
+            "example": "/?page=10",
+            "nullable": false
+          },
+          "firstPageUrl": {
+            "type": "string",
+            "example": "/?page=1",
+            "nullable": false
+          },
+          "nextPageUrl": {
+            "type": "string",
+            "example": "/?page=6",
+            "nullable": false
+          },
+          "previousPageUrl": {
+            "type": "string",
+            "example": "/?page=5",
+            "nullable": false
+          }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/api/v1/documentation/{id}": {
+      "get": {
+        "summary": "Get a list of v1 (index)",
+        "description": "Returns **200** (OK) as **text/plain**\n\n _app/controllers/swaggers_controller.ts_ - **index**",
+        "operationId": "getDocumentation",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of documentation",
+            "schema": {
+              "example": "1",
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "3"
+              ]
+            },
+            "required": false
+          }
+        ],
+        "tags": [
+          "V1"
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "text/plain": {
+                "example": "Return HTML code of documentation page"
+              }
+            },
+            "description": "Returns **200** (OK) as **text/plain**"
+          }
+        },
+        "security": []
+      }
+    },
+    "/api/v1/bmi/{weight}/{height}/{gender}": {
+      "get": {
+        "summary": " (bmi)",
+        "description": "\n\n _app/controllers/bmis_controller.ts_ - **bmi**",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "weight",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "height",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "gender",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "tags": [
+          "V1"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "security": []
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "V1",
+      "description": "Everything related to V1"
+    }
+  ]
+}

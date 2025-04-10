@@ -1,1 +1,0 @@
-{"version":3,"file":"channel_members_controller.js","sourceRoot":"","sources":["../../../app/controllers/channel_members_controller.ts"],"names":[],"mappings":"AAEA,MAAM,CAAC,OAAO,OAAO,wBAAwB;IAQzC,KAAK,CAAC,EAAgB;QAClB,OAAO;YACH;gBACI,OAAO,EAAE,0BAA0B;aACtC;SACJ,CAAA;IACL,CAAC;CACJ"}
